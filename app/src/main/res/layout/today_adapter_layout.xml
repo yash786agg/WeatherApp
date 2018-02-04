@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/todayAdpConLyt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen16dp"
+        android:layout_marginStart="@dimen/dimen16dp"
+        android:layout_marginRight="@dimen/dimen16dp"
+        android:layout_marginEnd="@dimen/dimen16dp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/tempTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen16dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/textsize16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/tempImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tempTime"
+            app:srcCompat="@drawable/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/tempTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen10dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize26sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tempImg" />
+
+        <TextView
+            android:id="@+id/mainTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen5dp"
+            android:layout_marginLeft="@dimen/dimen5dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/textsize14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tempTxt"
+            app:layout_constraintStart_toEndOf="@+id/tempTxt" />
+
+        <TextView
+            android:id="@+id/tempDespr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen12dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tempTxt" />
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>
+

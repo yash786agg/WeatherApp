@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/navAppBar"
+            layout="@layout/navigation_app_bar"/>
+
+        <FrameLayout
+            android:id="@+id/mainActvFramelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/navAppBar"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/navDrawRltv"
+        android:layout_width="@dimen/dimen240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:id="@+id/Profilell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/holo_green_dark">
+
+            <ImageView
+                android:id="@+id/profilePic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin20dp"
+                android:background="@drawable/ic_launcher"/>
+
+            <TextView
+                android:id="@+id/userNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textSize17sp"
+                android:layout_marginStart="@dimen/dimen15dp"
+                android:layout_marginLeft="@dimen/dimen15dp" />
+
+            <TextView
+                android:id="@+id/emailTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textSize17sp"
+                android:layout_marginStart="@dimen/dimen15dp"
+                android:layout_marginLeft="@dimen/dimen15dp"
+                android:layout_marginBottom="@dimen/dimen20dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/SignOutTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen40dp"
+            android:textSize="@dimen/textsize14sp"
+            android:drawablePadding="@dimen/dimen20dp"
+            android:layout_marginLeft="@dimen/margin20dp"
+            android:layout_marginStart="@dimen/margin20dp"
+            android:gravity="center_vertical"
+            android:text="@string/SignOut"
+            android:layout_alignParentBottom="true"
+            android:drawableLeft="@drawable/logout_vector_icon_selector"
+            android:drawableStart="@drawable/logout_vector_icon_selector"
+            android:textColor="@android:color/black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen1dp"
+            android:layout_above="@+id/SignOutTxt"
+            android:layout_marginBottom="@dimen/dimen10dp"
+            android:background="@color/navigation_line_seperator"/>
+
+        <ListView
+            android:id="@+id/drawerLstv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Profilell"
+            android:layout_marginTop="@dimen/dimen10dp"
+            android:layout_gravity="start"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="@dimen/margin0dp" />
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>
+
+
+
+
+

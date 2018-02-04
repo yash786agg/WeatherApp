@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/cityTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen8dp"
+            android:layout_marginStart="@dimen/dimen8dp"
+            android:layout_marginTop="@dimen/dimen20dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize27sp"
+            android:typeface="normal"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.481"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dateTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen5dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cityTxt" />
+
+
+        <ImageView
+            android:id="@+id/weatherImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="false"
+            app:srcCompat="@drawable/ic_launcher"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateTxt"/>
+
+        <TextView
+            android:id="@+id/tempTxtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen5dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weatherImg" />
+
+        <TextView
+            android:id="@+id/rangeTempTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen15dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tempTxtv" />
+
+        <TextView
+            android:id="@+id/wind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen34dp"
+            android:layout_marginLeft="@dimen/dimen34dp"
+            android:layout_marginTop="@dimen/dimen28dp"
+            android:text="@string/wind"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rangeTempTxt" />
+
+        <TextView
+            android:id="@+id/windTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen5dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize16sp"
+            app:layout_constraintStart_toStartOf="@+id/wind"
+            app:layout_constraintTop_toBottomOf="@+id/wind" />
+
+        <TextView
+            android:id="@+id/humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen34dp"
+            android:layout_marginRight="@dimen/dimen34dp"
+            android:layout_marginTop="@dimen/dimen28dp"
+            android:text="@string/humidity"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rangeTempTxt" />
+
+        <TextView
+            android:id="@+id/humidityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen4dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize16sp"
+            app:layout_constraintStart_toStartOf="@+id/humidity"
+            app:layout_constraintTop_toBottomOf="@+id/humidity" />
+
+        <TextView
+            android:id="@+id/hourlyForecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen8dp"
+            android:text="@string/hourlyForecast"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textSize18sp"
+            app:layout_constraintStart_toStartOf="@+id/windTxt"
+            app:layout_constraintTop_toBottomOf="@+id/windTxt" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/hourlyRcylv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen8dp"
+            app:layout_constraintStart_toStartOf="@+id/hourlyForecast"
+            app:layout_constraintTop_toBottomOf="@+id/hourlyForecast" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

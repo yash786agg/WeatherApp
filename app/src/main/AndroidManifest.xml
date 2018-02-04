@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.chilindo">
+
+    <!--Permission to access the Internet in device. -->
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!--Permission to access the Current Location of the device. -->
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Transparent">
+        <activity android:name=".Splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--MainActivity. -->
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize">
+        </activity>
+
+        <!--Crashlytics. -->
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="2adbc9654c5571db6974a07571ffd23b87face7a" />
+
+    </application>
+
+</manifest>

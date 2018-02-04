@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/weatherapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen8dp"
+        android:layout_marginEnd="@dimen/dimen8dp"
+        android:layout_marginStart="@dimen/dimen8dp"
+        android:layout_marginTop="@dimen/dimen224dp"
+        android:text="@string/app_name"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/loginll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/loginll"
+        android:layout_width="@dimen/dimen0dp"
+        android:layout_height="@dimen/dimen0dp"
+        android:layout_marginEnd="@dimen/dimen30dp"
+        android:layout_marginLeft="@dimen/dimen30dp"
+        android:layout_marginRight="@dimen/dimen30dp"
+        android:layout_marginStart="@dimen/dimen30dp"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weatherapp">
+
+
+        <TextView
+            android:id="@+id/loginViaTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/loginVia"
+            android:layout_marginTop="@dimen/dimen40dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/textsize16sp" />
+
+        <Button
+            android:id="@+id/googleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen20dp"
+            android:background="@drawable/google_btn_selector"
+            android:text="@string/google"
+            android:textAlignment="center"
+            android:textColor="@drawable/google_btn_text_color_selector" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/googleSignInBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

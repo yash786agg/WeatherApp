@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/weeklyAdpll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen5dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:background="@drawable/custom_rectangle">
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/weeklyDayTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="bottom"
+                android:textAllCaps="true"
+                android:textColor="@color/turquoise"
+                android:textSize="@dimen/textsize16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/weeklyDateTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/textsize14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimen5dp"
+            android:layout_marginStart="@dimen/dimen5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/weeklyTempImg"
+                    android:layout_width="@dimen/dimen0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/weeklyTempTxt"
+                    android:layout_width="@dimen/dimen0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textSize26sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/weeklyDescrTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/dimen5dp"
+                android:layout_marginTop="@dimen/dimen10dp"
+                android:textAllCaps="true"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/textsize14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/weeklyHumdityTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@color/turquoise"
+                android:textSize="@dimen/textsize16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Weather App</string>
+
+    <!-- Security Permission Strings. -->
+
+    <string name="GPS">GPS</string>
+    <string name="permissionDenied">Permission Denied</string>
+    <string name="iamSure">I AM SURE</string>
+    <string name="reTry">RE-TRY</string>
+    <string name="accessFineLoc">Without this permission you won\'t be able to get weather forecast. Are you sure you want to Deny this permission.?</string>
+
+    <string name="loginVia">Login Via</string>
+    <string name="google">Google</string>
+    <string name="connectWifiDataConn">Please Connect to Your Wifi or Data Connection..</string>
+
+    <string name="loading">Loading</string>
+    <string name="SignOut">SignOut</string>
+    <string name="drawerOpen">Open</string>
+    <string name="drawerClose">Close</string>
+    <string name="comma">,</string>
+    <string name="low">Low</string>
+    <string name="high">High</string>
+    <string name="celsius">°C</string>
+    <string name="degree">°</string>
+    <string name="sepeartor">|</string>
+    <string name="wind">WIND</string>
+    <string name="humidity">HUMIDITY</string>
+    <string name="humid">Humidity</string>
+    <string name="kmPerHour">Km/h</string>
+    <string name="percentage">%</string>
+    <string name="hourlyForecast">Hourly Forecast</string>
+    <string name="timeappend">:00:00</string>
+    <string name="temperature">Temperature</string>
+    <string name="day">Day</string>
+    <string name="trueValue">True</string>
+    <string name="falseValue">False</string>
+    <string name="logout_message">Are you sure you want to Logout?</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+
+    <string name="todayForeCast">Today\'s Forecast</string>
+    <string name="weeklyForeCast">Weekly Forecast</string>
+
+    <string name="latitude">latitude</string>
+    <string name="longitude">longitude</string>
+    <string name="userName">userName</string>
+    <string name="userEmail">userEmail</string>
+    <string name="userProfilePic">userProfilePic</string>
+    <string name="gettingLocation">Getting your Location</string>
+    <string name="sureAboutGps">Are you sure? As you\'re unable to move forward without providing your location</string>
+    <string name="unableToProceed">As Permission is denied by you. So you\'re unable to proceed further.</string>
+    <string name="locationNotEnable">Location not enabled,cancelled by you.</string>
+    <string name="googleSigInCancelled">Google SignIn is cancelled by user</string>
+    <string name="unableToConnectServer">Unable to connect to the server.</string>
+    <string name="fail">Fail</string>
+
+    <string-array name="navDrawItemArray">
+        <item>Today\'s Forecast</item>
+        <item>Weekly Forecast</item>
+
+    </string-array>
+
+</resources>

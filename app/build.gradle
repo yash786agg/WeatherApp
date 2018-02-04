@@ -1,0 +1,79 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.app.chilindo"
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies
+{
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //android-support
+    implementation 'com.android.support:appcompat-v7:'+ rootProject.supportLibraryVersion
+    compile 'com.android.support:design:'+ rootProject.supportLibraryVersion
+
+    //constraint-layout
+    compile 'com.android.support.constraint:constraint-layout:'+ rootProject.constraintLayout
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    //retrofit
+    compile 'com.squareup.retrofit2:retrofit:'+retrofitVersion
+    compile 'com.squareup.retrofit2:converter-gson:'+retrofitVersion
+
+    //Android lifecycle Dependency Injection
+    compile 'android.arch.lifecycle:runtime:'+rootProject.liveDataVersion
+    compile 'android.arch.lifecycle:extensions:'+rootProject.liveExtensionVersion
+
+    //Google location service
+    compile 'com.google.android.gms:play-services-location:'+rootProject.googlePlayVersion
+
+    //Google login
+    compile 'com.google.android.gms:play-services-auth:'+rootProject.googlePlayVersion
+
+    //Vector-icon
+    compile 'com.android.support:support-vector-drawable:'+ rootProject.supportLibraryVersion
+
+    //ButterKnife
+    compile 'com.jakewharton:butterknife:'+rootProject.butterknifeVersion
+    annotationProcessor 'com.jakewharton:butterknife-compiler:'+rootProject.butterknifeVersion
+
+    //Picasso
+    compile 'com.squareup.picasso:picasso:'+rootProject.picassoVersion
+
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar')
+    {
+        transitive = true;
+    }
+}
+// Add to the bottom of the file
+apply plugin: 'com.google.gms.google-services'
